@@ -13,14 +13,22 @@ AssistiveMmlHandler(handler);
 
 //  Create input and output jax and a document using them on the content from the HTML file
 const mml = new MathML();
-const chtml = new CHTML({ fontData: new MathJaxStix2Font({ fontURL: './fonts/mathjax-stix2' }) });
-const html = mathjax.document('', { InputJax: mml, OutputJax: chtml });
+const chtml = new CHTML({
+    fontData: new MathJaxStix2Font({ fontURL: './fonts/mathjax-stix2' }),
+    displayOverflow: 'linebreak',
+});
+
+const math = mathjax.document('', { InputJax: mml, OutputJax: chtml });
 
 export function renderMathML(mathml, display) {
-    const node = html.convert(mathml, { display });
+    const node = math.convert(mathml, {
+        display,
+        containerWidth: 400, // 25em
+    });
+
     return adaptor.outerHTML(node);
 }
 
 export function getMathStylesheetSubset() {
-    return adaptor.textContent(chtml.styleSheet(html));
+    return adaptor.textContent(chtml.styleSheet(math));
 }
