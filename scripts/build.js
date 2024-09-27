@@ -7,15 +7,6 @@ import subset from 'subset-font';
 
 import { getMathStylesheetSubset, renderMathML } from './mathjax.js';
 
-renderMathML(`
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow class="MJX-TeXAtom-ORD">
-    <mi>n</mi>
-    <mo>!</mo>
-  </mrow>
-</math>
-`);
-
 const root = join(import.meta.dirname, '..');
 const modules = join(root, 'node_modules');
 const src = join(root, 'src');
@@ -77,12 +68,10 @@ async function main() {
                     }
                 }
 
-                const modified = font.write({
+                return font.write({
                     type: 'woff',
                     toBuffer: true,
                 });
-
-                return modified;
             },
         ],
 
