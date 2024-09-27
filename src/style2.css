@@ -25,6 +25,15 @@ h2 ~ p:first-of-type:first-letter {
     font-family: 'Libertinus Serif', serif;
 }
 
+nav.header a[href] {
+    margin: -0.5ex;
+    padding: 0.5ex;
+}
+
+h2 ~ p:first-of-type:first-letter {
+    margin-top: 0.06rem;
+}
+
 pre,
 code,
 tt,
