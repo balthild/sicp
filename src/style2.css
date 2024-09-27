@@ -1,0 +1,113 @@
+html {
+    font-family: 'Libertinus Serif', serif;
+    font-feature-settings: 'liga', 'dlig', 'ss06';
+}
+
+body {
+    display: flex;
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+strong,
+nav.header p {
+    font-family: 'Libertinus Sans', sans-serif;
+}
+
+abbr,
+span.roman,
+h2 ~ p:first-of-type:first-line,
+h2 ~ p:first-of-type:first-letter {
+    font-family: 'Libertinus Serif', serif;
+}
+
+pre,
+code,
+tt,
+samp,
+math *[mathvariant='monospace'] {
+    font-family: 'Inconsolata LGC', 'Parameter-Brackets', monospace, sans-serif;
+    font-feature-settings: 'cv02';
+}
+
+main {
+    flex: 2;
+}
+
+main section {
+    margin: 0 auto;
+    padding: 0 1em;
+    width: auto;
+    max-width: 30em;
+}
+
+@media screen and (max-width: 992px) {
+    aside {
+        display: none;
+    }
+}
+
+aside {
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    flex: 1;
+    align-self: flex-start;
+    font-size: 0.65rem;
+    min-width: 15em;
+    max-width: 25em;
+    height: 100vh;
+    overflow-y: auto;
+    line-height: 110%;
+    padding: 1em 0.6em;
+}
+
+aside ul {
+    margin: 0;
+    padding: 0;
+}
+
+aside li {
+    position: relative;
+}
+
+aside li ul {
+    padding-left: 1em;
+}
+
+aside li ul::before {
+    content: ' ';
+    position: absolute;
+    left: 0.5em;
+    top: 1.5em;
+    bottom: 0.5em;
+    z-index: -1;
+    width: 0;
+    border-left: 1px dashed #bbbbbb;
+}
+
+aside li a.current + ul::before {
+    border-left-color: #804040;
+}
+
+aside a {
+    display: flex;
+    padding: 0.25em 0.3em 0.25em;
+}
+
+aside a.current {
+    background-color: #804040;
+    color: #ffffff;
+}
+
+aside a .number {
+    margin-right: 0.4em;
+}
+
+aside a:hover .title {
+    text-decoration: underline;
+}

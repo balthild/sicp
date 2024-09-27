@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Inconsolata LGC';
+    font-weight: normal;
+    font-style: normal;
+    src: url('./inconsolatalgc-1.9.0/Inconsolata-LGC.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inconsolata LGC';
+    font-weight: normal;
+    font-style: italic;
+    src: url('./inconsolatalgc-1.9.0/Inconsolata-LGC-Italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inconsolata LGC';
+    font-weight: bold;
+    font-style: normal;
+    src: url('./inconsolatalgc-1.9.0/Inconsolata-LGC-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inconsolata LGC';
+    font-weight: bold;
+    font-style: italic;
+    src: url('./inconsolatalgc-1.9.0/Inconsolata-LGC-BoldItalic.woff2') format('woff2');
+}
+
+@font-feature-values 'Inconsolata LGC' {
+    @styleset {
+        alternative-umlaut: 1;
+    }
+    @character-variant {
+        zero-plain: 1 1;
+        zero-dotted: 1 2;
+        zero-longslash: 1 3;
+        r-with-serif: 2 1;
+        eng-descender: 3 1;
+        eng-uppercase: 3 2;
+        dollar-open: 4 1;
+        dollar-oldstyle: 4 2;
+        dollar-cifrao: 4 2;
+        ezh-no-descender: 5 1;
+        ezh-reversed-sigma: 5 2;
+        triangle-text-form: 6 1;
+        el-with-hook-old: 7 1;
+        qa-enlarged-lowercase: 8 1;
+        qa-reversed-p: 8 2;
+        che-with-hook: 9 1;
+        che-with-hook-alt: 9 2;
+        ge-with-hook: 10 1;
+        ge-with-hook-alt: 10 2;
+        ge-with-stroke-and-descender: 11 1;
+    }
+}

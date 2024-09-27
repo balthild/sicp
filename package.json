@@ -1,0 +1,23 @@
+{
+  "name": "sicp",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "watch": "nodemon --ext js,css --ignore dist node scripts/build.js",
+    "build": "rm -rf dist && node scripts/build.js",
+    "serve": "python3 -m http.server -d dist"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0",
+    "fonteditor-core": "^2.4.1",
+    "mathjax-full": "^4.0.0-beta.7",
+    "nodemon": "^3.1.7",
+    "subset-font": "^2.3.0"
+  },
+  "dependencies": {
+    "@expo-google-fonts/chivo": "^0.2.3",
+    "@fontsource/dejavu-sans": "^5.1.0",
+    "mathjax-stix2-font": "^4.0.0-beta.7"
+  }
+}

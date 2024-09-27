@@ -1,0 +1,17 @@
+@import url(libertinus.css);
+@import url(inconsolata.css);
+
+@font-face {
+    font-family: 'DejaVu-Arrows';
+    font-weight: bold;
+    font-style: normal;
+    src: url('dejavu-sans-b-arrows.woff2');
+}
+
+@font-face {
+    font-family: 'Parameter-Brackets';
+    font-weight: normal;
+    font-style: normal;
+    size-adjust: 125%;
+    src: url('chivo-r-brackets.woff2');
+}
