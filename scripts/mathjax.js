@@ -16,6 +16,7 @@ const mml = new MathML();
 const chtml = new CHTML({
     fontData: new MathJaxStix2Font({ fontURL: './fonts/mathjax-stix2' }),
     displayOverflow: 'linebreak',
+    scale: 0.95,
 });
 
 const math = mathjax.document('', { InputJax: mml, OutputJax: chtml });
