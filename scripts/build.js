@@ -8,7 +8,7 @@ import subset from 'subset-font';
 import { getMathStylesheetSubset, renderMathML } from './mathjax.js';
 
 const root = join(import.meta.dirname, '..');
-const modules = join(root, 'node_modules');
+const deps = join(root, 'node_modules');
 const src = join(root, 'src');
 const sicp = join(root, 'sicp/html');
 const dist = join(root, 'dist');
@@ -24,12 +24,12 @@ async function main() {
 
     const copyPaths = [
         [
-            join(modules, '@fontsource/dejavu-sans/files/dejavu-sans-latin-700-normal.woff2'),
+            join(deps, '@fontsource/dejavu-sans/files/dejavu-sans-latin-700-normal.woff2'),
             join(fonts, 'dejavu-sans-b-arrows.woff2'),
             (buf) => subset(buf, '⇡⇣', { targetFormat: 'woff2' }),
         ],
         [
-            join(modules, '@expo-google-fonts/chivo/Chivo_400Regular.ttf'),
+            join(deps, '@expo-google-fonts/chivo/Chivo_400Regular.ttf'),
             join(fonts, 'chivo-r-brackets.woff2'),
             async (buf) => {
                 const leftUnicode = '⟨'.charCodeAt(0);
@@ -75,7 +75,7 @@ async function main() {
             },
         ],
 
-        [join(modules, 'mathjax-stix2-font/chtml/woff'), join(fonts, 'mathjax-stix2')],
+        [join(deps, 'mathjax-stix2-font/chtml/woff'), join(fonts, 'mathjax-stix2')],
 
         [join(sicp, 'fig'), join(dist, 'fig')],
         [join(sicp, 'css/style.css'), join(css, 'style.css')],
